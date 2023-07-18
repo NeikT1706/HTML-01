@@ -6,6 +6,11 @@
     --primary-color: #0f1b4c;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -51,17 +56,28 @@ a {
 }
 
 /* Header */
+.fixed-header {
+    background-color: #e6f0ff;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+}
 
-.header {
-    height: 100vh;
+.hero-wrap {
+    height: calc(100vh - 90px);
     background: #e6f0ff;
+    display: flex;
+    flex-direction: column;
     position: relative;
+    justify-content: center;
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    /* padding-top: 38px; */
+    padding: 12px 0;
 }
 
 .navbar ul {
@@ -92,12 +108,11 @@ a {
     border-radius: 8px;
 }
 
-.hero {
-    margin-top: 130px;
+.hero-wrap .info {
     width: 50.36%;
 }
 
-.hero .sub-title {
+.hero-wrap .sub-title {
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.5;
@@ -105,7 +120,7 @@ a {
     color: #687690;
 }
 
-.hero .title {
+.hero-wrap .title {
     margin-top: 8px;
     color: #000336;
     font-size: 6.2rem;
@@ -113,7 +128,7 @@ a {
     line-height: 1.1875;
 }
 
-.hero .desc {
+.hero-wrap .desc {
     margin-top: 30px;
     color: #5a6473;
     font-size: 1.8rem;
@@ -121,12 +136,12 @@ a {
     line-height: 1.75;
 }
 
-.hero .hero-cta {
+.hero-wrap .hero-cta {
     margin-top: 40px;
     min-width: 170px;
 }
 
-.hero .hero-img {
+.hero-wrap .hero-img {
     position: absolute;
     bottom: 0;
     right: calc((100vw - 1110px) / 2 - 100px);
@@ -160,6 +175,18 @@ a {
     justify-content: space-between;
     margin-top: 70px;
     align-items: center;
+}
+
+.client .images a {
+    padding: 0 42px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.client .images a:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Guides */
